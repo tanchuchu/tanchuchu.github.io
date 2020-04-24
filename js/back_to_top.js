@@ -145,4 +145,24 @@ $(document).ready(() => {
     $('#back-to-top').on('click', () => {
         $('body, html').animate({ scrollTop: 0 }, 400);
     });
+
+
+
+    function flexToc(){
+        var oDiv = document.getElementById("toc"),
+            H = 0,
+            Y = oDiv
+        while (Y) {H += Y.offsetTop; Y = Y.offsetParent}
+        window.onscroll = function()
+        {
+            var s = document.body.scrollTop || document.documentElement.scrollTop
+            if(s>1750) {
+                oDiv.style = "position:fixed;top:50px;z-index:9999"
+            } else {
+                oDiv.style = ""
+            }
+        }
+    }
+
+    flexToc();
 });

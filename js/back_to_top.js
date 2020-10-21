@@ -1,4 +1,6 @@
-$(document).ready(() => {
+$(document).ready(loadBackTop());
+
+function loadBackTop() {
     const $button = $('#back-to-top');
     const $footer = $('footer.footer');
     const $mainColumn = $('.column-main');
@@ -143,26 +145,10 @@ $(document).ready(() => {
     $(window).scroll(update);
 
     $('#back-to-top').on('click', () => {
-        $('body, html').animate({ scrollTop: 0 }, 400);
-    });
-
-
-
-    function flexToc(){
-        var oDiv = document.getElementById("toc"),
-            H = 0,
-            Y = oDiv
-        while (Y) {H += Y.offsetTop; Y = Y.offsetParent}
-        window.onscroll = function()
-        {
-            var s = document.body.scrollTop || document.documentElement.scrollTop
-            if(s>1750) {
-                oDiv.style = "position:fixed;top:50px;z-index:9999"
-            } else {
-                oDiv.style = ""
-            }
+        if (CSS && CSS.supports && CSS.supports('(scroll-behavior: smooth)')) {
+            window.scroll({ top: 0, behavior: 'smooth' });
+        } else {
+            $('body, html').animate({ scrollTop: 0 }, 400);
         }
-    }
-
-    flexToc();
-});
+    });
+};

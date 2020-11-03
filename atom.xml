@@ -1,16 +1,16 @@
 <?xml version="1.0" encoding="utf-8"?>
 <feed xmlns="http://www.w3.org/2005/Atom">
-  <title>辣椒の酱</title>
+  <title>谭楚楚</title>
   
   <subtitle>尚未执佩剑，转眼即江湖</subtitle>
   <link href="/atom.xml" rel="self"/>
   
-  <link href="https://removeif.github.io/"/>
+  <link href="http://tanchuchu.github.io/"/>
   <updated>2020-11-03T15:22:19.405Z</updated>
-  <id>https://removeif.github.io/</id>
+  <id>http://tanchuchu.github.io/</id>
   
   <author>
-    <name>辣椒の酱</name>
+    <name>谭楚楚</name>
     
   </author>
   
@@ -18,8 +18,8 @@
   
   <entry>
     <title>const常量基础详解</title>
-    <link href="https://removeif.github.io/posts/12153/"/>
-    <id>https://removeif.github.io/posts/12153/</id>
+    <link href="http://tanchuchu.github.io/posts/12153/"/>
+    <id>http://tanchuchu.github.io/posts/12153/</id>
     <published>2020-11-03T15:17:22.795Z</published>
     <updated>2020-11-03T15:22:19.405Z</updated>
     
@@ -32,21 +32,21 @@
     </summary>
     
     
-      <category term="js" scheme="https://removeif.github.io/categories/js/"/>
+      <category term="js" scheme="http://tanchuchu.github.io/categories/js/"/>
     
     
-      <category term="es6" scheme="https://removeif.github.io/tags/es6/"/>
+      <category term="es6" scheme="http://tanchuchu.github.io/tags/es6/"/>
     
-      <category term="js" scheme="https://removeif.github.io/tags/js/"/>
+      <category term="js" scheme="http://tanchuchu.github.io/tags/js/"/>
     
-      <category term="const" scheme="https://removeif.github.io/tags/const/"/>
+      <category term="const" scheme="http://tanchuchu.github.io/tags/const/"/>
     
   </entry>
   
   <entry>
     <title>v-if与v-show、v-if与v-for</title>
-    <link href="https://removeif.github.io/posts/60979/"/>
-    <id>https://removeif.github.io/posts/60979/</id>
+    <link href="http://tanchuchu.github.io/posts/60979/"/>
+    <id>http://tanchuchu.github.io/posts/60979/</id>
     <published>2020-11-02T16:00:00.000Z</published>
     <updated>2020-11-03T15:22:19.427Z</updated>
     
@@ -63,17 +63,41 @@
     </summary>
     
     
-      <category term="vue" scheme="https://removeif.github.io/categories/vue/"/>
+      <category term="vue" scheme="http://tanchuchu.github.io/categories/vue/"/>
     
     
-      <category term="vue" scheme="https://removeif.github.io/tags/vue/"/>
+      <category term="vue" scheme="http://tanchuchu.github.io/tags/vue/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>class与style绑定</title>
+    <link href="http://tanchuchu.github.io/posts/54638/"/>
+    <id>http://tanchuchu.github.io/posts/54638/</id>
+    <published>2020-11-01T16:00:00.000Z</published>
+    <updated>2020-11-03T15:22:19.412Z</updated>
+    
+    <content type="html"><![CDATA[<p>我们可以传给 v-bind:class 一个对象，以动态地切换 class</p><p>v-bind:style 的对象语法十分直观——看着非常像 CSS，但其实是一个 JavaScript 对象。CSS property 名可以用驼峰式 (camelCase) 或短横线分隔 (kebab-case，记得用引号括起来) 来命名</p><a id="more"></a><h3 id="v-bind-class-class"><a href="#v-bind-class-class" class="headerlink" title="v-bind:class (:class)"></a>v-bind:class (:class)</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line">&#x2F;&#x2F;单独绑定class</span><br><span class="line">&lt;div class&#x3D;&quot;box&quot; :class&#x3D;&quot;&#123;activecss : active , radiuscss : radius&#125;&quot; &gt;test&lt;&#x2F;div&gt;</span><br><span class="line">&#x2F;&#x2F;绑定class数组对象</span><br><span class="line">&lt;div class&#x3D;&quot;box&quot; :class&#x3D;&quot;[classObj1,classObj2]&quot; &gt;test&lt;&#x2F;div&gt;</span><br><span class="line">&#x2F;&#x2F;单独绑定+class数组对象</span><br><span class="line">&lt;div class&#x3D;&quot;box&quot; :class&#x3D;&quot;[&#123;activecss:active&#125;,classObj1,classObj2]&quot;&gt;test&lt;&#x2F;div&gt;</span><br><span class="line">&#x2F;&#x2F;三元二次</span><br><span class="line">&lt;div class&#x3D;&quot;box&quot; :class&#x3D;&quot;[ active ? classObj2:&#39;&#39; , classObj1]&quot; &gt;test&lt;&#x2F;div&gt;</span><br><span class="line">&#x2F;&#x2F;结合计算属性</span><br><span class="line">&lt;div class&#x3D;&quot;box&quot; :class&#x3D;&quot;classObj3&quot; &gt;test&lt;&#x2F;div&gt;</span><br></pre></td></tr></table></figure><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br></pre></td><td class="code"><pre><span class="line">  data()&#123;</span><br><span class="line">    return&#123;</span><br><span class="line">                loading:true,</span><br><span class="line">                getData:true,</span><br><span class="line">                active:true,</span><br><span class="line">                radius:false,</span><br><span class="line">                classObj1:&#123;</span><br><span class="line">                  bordercss:true,</span><br><span class="line">                &#125;,</span><br><span class="line">                classObj2:&#123;</span><br><span class="line">                  fontcss:true</span><br><span class="line">                &#125;,</span><br><span class="line">    &#125;</span><br><span class="line">  &#125;,</span><br><span class="line">computed:&#123;</span><br><span class="line">    classObj3()&#123;</span><br><span class="line">      return&#123;</span><br><span class="line">        colorcss:this.loading &amp;&amp; this.getData</span><br><span class="line">      &#125;</span><br><span class="line">    &#125;</span><br><span class="line">  &#125;</span><br></pre></td></tr></table></figure><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br></pre></td><td class="code"><pre><span class="line">&lt;style scoped&gt;</span><br><span class="line">.box&#123;</span><br><span class="line">  height: 100px;</span><br><span class="line">  width: 100px;</span><br><span class="line">  background-color: green;</span><br><span class="line">&#125;</span><br><span class="line">  .activecss&#123;</span><br><span class="line">    margin: 100px auto;</span><br><span class="line">  &#125;</span><br><span class="line">  .radiuscss&#123;</span><br><span class="line">    border-radius: 50%;</span><br><span class="line">  &#125;</span><br><span class="line">.bordercss&#123;</span><br><span class="line">  border:2px solid red</span><br><span class="line">&#125;</span><br><span class="line">.fontcss&#123;</span><br><span class="line">  font-size:50px</span><br><span class="line">&#125;</span><br><span class="line">  .colorcss&#123;</span><br><span class="line">    color: purple;</span><br><span class="line">  &#125;</span><br><span class="line"></span><br><span class="line">&lt;&#x2F;style&gt;</span><br></pre></td></tr></table></figure><p>当 active 或者 radius 变化时，class 列表将相应地更新。例如，如果 radius 的值为 true，class 列表将变为 “box activecss radiuscss”</p><h3 id="v-bind-style-style"><a href="#v-bind-style-style" class="headerlink" title="v-bind:style (:style)"></a>v-bind:style (:style)</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line">&#x2F;&#x2F;对象语法</span><br><span class="line"> &lt;div :style&#x3D;&quot;&#123;fontSize:fontSize , height:height , width:width , backgroundColor:backgroundColor&#125;&quot;&gt;test&lt;&#x2F;div&gt;</span><br><span class="line"> &lt;div :style&#x3D;&quot;boxStyle1&quot;&gt;test&lt;&#x2F;div&gt;</span><br><span class="line"> &#x2F;&#x2F;数组语法</span><br><span class="line"> &lt;div :style&#x3D;&quot;[boxStyle1,boxStyle2]&quot;&gt;test&lt;&#x2F;div&gt;</span><br><span class="line"> &#x2F;&#x2F;多重值</span><br><span class="line"> &lt;div :style&#x3D;&quot;[&#123;display:[&#39;-webkit-box&#39;, &#39;-ms-flexbox&#39;,&#39;flex&#39;]&#125;,boxStyle2]&quot;&gt;</span><br><span class="line">   &lt;div :style&#x3D;&quot;boxStyle1&quot;&gt;test&lt;&#x2F;div&gt;</span><br><span class="line">   &lt;div :style&#x3D;&quot;boxStyle1&quot;&gt;test&lt;&#x2F;div&gt;</span><br><span class="line">   &lt;div :style&#x3D;&quot;boxStyle1&quot;&gt;test&lt;&#x2F;div&gt;</span><br><span class="line"> &lt;&#x2F;div&gt;</span><br></pre></td></tr></table></figure><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br></pre></td><td class="code"><pre><span class="line">data()&#123;</span><br><span class="line">    return&#123;</span><br><span class="line">             fontSize:&#39;50px&#39;,</span><br><span class="line">              height:&#39;100px&#39;,</span><br><span class="line">              width:&#39;100px&#39;,</span><br><span class="line">              backgroundColor:&#39;red&#39;,</span><br><span class="line">              boxStyle1:&#123;</span><br><span class="line">                fontSize:&#39;50px&#39;,</span><br><span class="line">                height:&#39;100px&#39;,</span><br><span class="line">                width:&#39;100px&#39;,</span><br><span class="line">                backgroundColor:&#39;red&#39;,</span><br><span class="line">                margin:&#39;20px&#39;</span><br><span class="line">              &#125;,</span><br><span class="line">              boxStyle2:&#123;</span><br><span class="line">                border:&#39;2px solid green&#39;</span><br><span class="line">              &#125;</span><br><span class="line">    &#125;</span><br><span class="line">  &#125;</span><br></pre></td></tr></table></figure>]]></content>
+    
+    <summary type="html">
+    
+      &lt;p&gt;我们可以传给 v-bind:class 一个对象，以动态地切换 class&lt;/p&gt;
+&lt;p&gt;v-bind:style 的对象语法十分直观——看着非常像 CSS，但其实是一个 JavaScript 对象。CSS property 名可以用驼峰式 (camelCase) 或短横线分隔 (kebab-case，记得用引号括起来) 来命名&lt;/p&gt;
+    
+    </summary>
+    
+    
+      <category term="vue" scheme="http://tanchuchu.github.io/categories/vue/"/>
+    
+    
+      <category term="vue" scheme="http://tanchuchu.github.io/tags/vue/"/>
     
   </entry>
   
   <entry>
     <title>计算属性computed与监听属性watch</title>
-    <link href="https://removeif.github.io/posts/53712/"/>
-    <id>https://removeif.github.io/posts/53712/</id>
+    <link href="http://tanchuchu.github.io/posts/53712/"/>
+    <id>http://tanchuchu.github.io/posts/53712/</id>
     <published>2020-11-01T16:00:00.000Z</published>
     <updated>2020-11-03T15:22:19.419Z</updated>
     
@@ -89,17 +113,17 @@
     </summary>
     
     
-      <category term="vue" scheme="https://removeif.github.io/categories/vue/"/>
+      <category term="vue" scheme="http://tanchuchu.github.io/categories/vue/"/>
     
     
-      <category term="vue" scheme="https://removeif.github.io/tags/vue/"/>
+      <category term="vue" scheme="http://tanchuchu.github.io/tags/vue/"/>
     
   </entry>
   
   <entry>
     <title>vue修饰符</title>
-    <link href="https://removeif.github.io/posts/17199/"/>
-    <id>https://removeif.github.io/posts/17199/</id>
+    <link href="http://tanchuchu.github.io/posts/17199/"/>
+    <id>http://tanchuchu.github.io/posts/17199/</id>
     <published>2020-11-01T16:00:00.000Z</published>
     <updated>2020-11-03T15:22:19.432Z</updated>
     
@@ -112,41 +136,17 @@
     </summary>
     
     
-      <category term="vue" scheme="https://removeif.github.io/categories/vue/"/>
+      <category term="vue" scheme="http://tanchuchu.github.io/categories/vue/"/>
     
     
-      <category term="vue" scheme="https://removeif.github.io/tags/vue/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>class与style绑定</title>
-    <link href="https://removeif.github.io/posts/54638/"/>
-    <id>https://removeif.github.io/posts/54638/</id>
-    <published>2020-11-01T16:00:00.000Z</published>
-    <updated>2020-11-03T15:22:19.412Z</updated>
-    
-    <content type="html"><![CDATA[<p>我们可以传给 v-bind:class 一个对象，以动态地切换 class</p><p>v-bind:style 的对象语法十分直观——看着非常像 CSS，但其实是一个 JavaScript 对象。CSS property 名可以用驼峰式 (camelCase) 或短横线分隔 (kebab-case，记得用引号括起来) 来命名</p><a id="more"></a><h3 id="v-bind-class-class"><a href="#v-bind-class-class" class="headerlink" title="v-bind:class (:class)"></a>v-bind:class (:class)</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line">&#x2F;&#x2F;单独绑定class</span><br><span class="line">&lt;div class&#x3D;&quot;box&quot; :class&#x3D;&quot;&#123;activecss : active , radiuscss : radius&#125;&quot; &gt;test&lt;&#x2F;div&gt;</span><br><span class="line">&#x2F;&#x2F;绑定class数组对象</span><br><span class="line">&lt;div class&#x3D;&quot;box&quot; :class&#x3D;&quot;[classObj1,classObj2]&quot; &gt;test&lt;&#x2F;div&gt;</span><br><span class="line">&#x2F;&#x2F;单独绑定+class数组对象</span><br><span class="line">&lt;div class&#x3D;&quot;box&quot; :class&#x3D;&quot;[&#123;activecss:active&#125;,classObj1,classObj2]&quot;&gt;test&lt;&#x2F;div&gt;</span><br><span class="line">&#x2F;&#x2F;三元二次</span><br><span class="line">&lt;div class&#x3D;&quot;box&quot; :class&#x3D;&quot;[ active ? classObj2:&#39;&#39; , classObj1]&quot; &gt;test&lt;&#x2F;div&gt;</span><br><span class="line">&#x2F;&#x2F;结合计算属性</span><br><span class="line">&lt;div class&#x3D;&quot;box&quot; :class&#x3D;&quot;classObj3&quot; &gt;test&lt;&#x2F;div&gt;</span><br></pre></td></tr></table></figure><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br></pre></td><td class="code"><pre><span class="line">  data()&#123;</span><br><span class="line">    return&#123;</span><br><span class="line">                loading:true,</span><br><span class="line">                getData:true,</span><br><span class="line">                active:true,</span><br><span class="line">                radius:false,</span><br><span class="line">                classObj1:&#123;</span><br><span class="line">                  bordercss:true,</span><br><span class="line">                &#125;,</span><br><span class="line">                classObj2:&#123;</span><br><span class="line">                  fontcss:true</span><br><span class="line">                &#125;,</span><br><span class="line">    &#125;</span><br><span class="line">  &#125;,</span><br><span class="line">computed:&#123;</span><br><span class="line">    classObj3()&#123;</span><br><span class="line">      return&#123;</span><br><span class="line">        colorcss:this.loading &amp;&amp; this.getData</span><br><span class="line">      &#125;</span><br><span class="line">    &#125;</span><br><span class="line">  &#125;</span><br></pre></td></tr></table></figure><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br></pre></td><td class="code"><pre><span class="line">&lt;style scoped&gt;</span><br><span class="line">.box&#123;</span><br><span class="line">  height: 100px;</span><br><span class="line">  width: 100px;</span><br><span class="line">  background-color: green;</span><br><span class="line">&#125;</span><br><span class="line">  .activecss&#123;</span><br><span class="line">    margin: 100px auto;</span><br><span class="line">  &#125;</span><br><span class="line">  .radiuscss&#123;</span><br><span class="line">    border-radius: 50%;</span><br><span class="line">  &#125;</span><br><span class="line">.bordercss&#123;</span><br><span class="line">  border:2px solid red</span><br><span class="line">&#125;</span><br><span class="line">.fontcss&#123;</span><br><span class="line">  font-size:50px</span><br><span class="line">&#125;</span><br><span class="line">  .colorcss&#123;</span><br><span class="line">    color: purple;</span><br><span class="line">  &#125;</span><br><span class="line"></span><br><span class="line">&lt;&#x2F;style&gt;</span><br></pre></td></tr></table></figure><p>当 active 或者 radius 变化时，class 列表将相应地更新。例如，如果 radius 的值为 true，class 列表将变为 “box activecss radiuscss”</p><h3 id="v-bind-style-style"><a href="#v-bind-style-style" class="headerlink" title="v-bind:style (:style)"></a>v-bind:style (:style)</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line">&#x2F;&#x2F;对象语法</span><br><span class="line"> &lt;div :style&#x3D;&quot;&#123;fontSize:fontSize , height:height , width:width , backgroundColor:backgroundColor&#125;&quot;&gt;test&lt;&#x2F;div&gt;</span><br><span class="line"> &lt;div :style&#x3D;&quot;boxStyle1&quot;&gt;test&lt;&#x2F;div&gt;</span><br><span class="line"> &#x2F;&#x2F;数组语法</span><br><span class="line"> &lt;div :style&#x3D;&quot;[boxStyle1,boxStyle2]&quot;&gt;test&lt;&#x2F;div&gt;</span><br><span class="line"> &#x2F;&#x2F;多重值</span><br><span class="line"> &lt;div :style&#x3D;&quot;[&#123;display:[&#39;-webkit-box&#39;, &#39;-ms-flexbox&#39;,&#39;flex&#39;]&#125;,boxStyle2]&quot;&gt;</span><br><span class="line">   &lt;div :style&#x3D;&quot;boxStyle1&quot;&gt;test&lt;&#x2F;div&gt;</span><br><span class="line">   &lt;div :style&#x3D;&quot;boxStyle1&quot;&gt;test&lt;&#x2F;div&gt;</span><br><span class="line">   &lt;div :style&#x3D;&quot;boxStyle1&quot;&gt;test&lt;&#x2F;div&gt;</span><br><span class="line"> &lt;&#x2F;div&gt;</span><br></pre></td></tr></table></figure><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br></pre></td><td class="code"><pre><span class="line">data()&#123;</span><br><span class="line">    return&#123;</span><br><span class="line">             fontSize:&#39;50px&#39;,</span><br><span class="line">              height:&#39;100px&#39;,</span><br><span class="line">              width:&#39;100px&#39;,</span><br><span class="line">              backgroundColor:&#39;red&#39;,</span><br><span class="line">              boxStyle1:&#123;</span><br><span class="line">                fontSize:&#39;50px&#39;,</span><br><span class="line">                height:&#39;100px&#39;,</span><br><span class="line">                width:&#39;100px&#39;,</span><br><span class="line">                backgroundColor:&#39;red&#39;,</span><br><span class="line">                margin:&#39;20px&#39;</span><br><span class="line">              &#125;,</span><br><span class="line">              boxStyle2:&#123;</span><br><span class="line">                border:&#39;2px solid green&#39;</span><br><span class="line">              &#125;</span><br><span class="line">    &#125;</span><br><span class="line">  &#125;</span><br></pre></td></tr></table></figure>]]></content>
-    
-    <summary type="html">
-    
-      &lt;p&gt;我们可以传给 v-bind:class 一个对象，以动态地切换 class&lt;/p&gt;
-&lt;p&gt;v-bind:style 的对象语法十分直观——看着非常像 CSS，但其实是一个 JavaScript 对象。CSS property 名可以用驼峰式 (camelCase) 或短横线分隔 (kebab-case，记得用引号括起来) 来命名&lt;/p&gt;
-    
-    </summary>
-    
-    
-      <category term="vue" scheme="https://removeif.github.io/categories/vue/"/>
-    
-    
-      <category term="vue" scheme="https://removeif.github.io/tags/vue/"/>
+      <category term="vue" scheme="http://tanchuchu.github.io/tags/vue/"/>
     
   </entry>
   
   <entry>
     <title>webpack性能优化</title>
-    <link href="https://removeif.github.io/posts/34455/"/>
-    <id>https://removeif.github.io/posts/34455/</id>
+    <link href="http://tanchuchu.github.io/posts/34455/"/>
+    <id>http://tanchuchu.github.io/posts/34455/</id>
     <published>2020-10-25T16:00:00.000Z</published>
     <updated>2020-11-03T15:22:19.456Z</updated>
     
@@ -159,17 +159,17 @@
     </summary>
     
     
-      <category term="webpack" scheme="https://removeif.github.io/categories/webpack/"/>
+      <category term="webpack" scheme="http://tanchuchu.github.io/categories/webpack/"/>
     
     
-      <category term="webpack" scheme="https://removeif.github.io/tags/webpack/"/>
+      <category term="webpack" scheme="http://tanchuchu.github.io/tags/webpack/"/>
     
   </entry>
   
   <entry>
     <title>html压缩</title>
-    <link href="https://removeif.github.io/posts/42731/"/>
-    <id>https://removeif.github.io/posts/42731/</id>
+    <link href="http://tanchuchu.github.io/posts/42731/"/>
+    <id>http://tanchuchu.github.io/posts/42731/</id>
     <published>2020-10-24T16:00:00.000Z</published>
     <updated>2020-11-03T15:22:19.444Z</updated>
     
@@ -182,17 +182,17 @@
     </summary>
     
     
-      <category term="webpack" scheme="https://removeif.github.io/categories/webpack/"/>
+      <category term="webpack" scheme="http://tanchuchu.github.io/categories/webpack/"/>
     
     
-      <category term="webpack" scheme="https://removeif.github.io/tags/webpack/"/>
+      <category term="webpack" scheme="http://tanchuchu.github.io/tags/webpack/"/>
     
   </entry>
   
   <entry>
     <title>js兼容性处理</title>
-    <link href="https://removeif.github.io/posts/15652/"/>
-    <id>https://removeif.github.io/posts/15652/</id>
+    <link href="http://tanchuchu.github.io/posts/15652/"/>
+    <id>http://tanchuchu.github.io/posts/15652/</id>
     <published>2020-10-24T16:00:00.000Z</published>
     <updated>2020-11-03T15:22:19.490Z</updated>
     
@@ -208,17 +208,17 @@
     </summary>
     
     
-      <category term="webpack" scheme="https://removeif.github.io/categories/webpack/"/>
+      <category term="webpack" scheme="http://tanchuchu.github.io/categories/webpack/"/>
     
     
-      <category term="webpack" scheme="https://removeif.github.io/tags/webpack/"/>
+      <category term="webpack" scheme="http://tanchuchu.github.io/tags/webpack/"/>
     
   </entry>
   
   <entry>
     <title>webpack生产环境设置</title>
-    <link href="https://removeif.github.io/posts/31383/"/>
-    <id>https://removeif.github.io/posts/31383/</id>
+    <link href="http://tanchuchu.github.io/posts/31383/"/>
+    <id>http://tanchuchu.github.io/posts/31383/</id>
     <published>2020-10-24T16:00:00.000Z</published>
     <updated>2020-11-03T15:22:19.478Z</updated>
     
@@ -234,17 +234,17 @@
     </summary>
     
     
-      <category term="webpack" scheme="https://removeif.github.io/categories/webpack/"/>
+      <category term="webpack" scheme="http://tanchuchu.github.io/categories/webpack/"/>
     
     
-      <category term="webpack" scheme="https://removeif.github.io/tags/webpack/"/>
+      <category term="webpack" scheme="http://tanchuchu.github.io/tags/webpack/"/>
     
   </entry>
   
   <entry>
     <title>eslint语法检查与兼容</title>
-    <link href="https://removeif.github.io/posts/35527/"/>
-    <id>https://removeif.github.io/posts/35527/</id>
+    <link href="http://tanchuchu.github.io/posts/35527/"/>
+    <id>http://tanchuchu.github.io/posts/35527/</id>
     <published>2020-10-23T16:00:00.000Z</published>
     <updated>2020-11-03T15:22:19.438Z</updated>
     
@@ -257,17 +257,17 @@
     </summary>
     
     
-      <category term="webpack" scheme="https://removeif.github.io/categories/webpack/"/>
+      <category term="webpack" scheme="http://tanchuchu.github.io/categories/webpack/"/>
     
     
-      <category term="webpack" scheme="https://removeif.github.io/tags/webpack/"/>
+      <category term="webpack" scheme="http://tanchuchu.github.io/tags/webpack/"/>
     
   </entry>
   
   <entry>
     <title>css单独提取、兼容与压缩</title>
-    <link href="https://removeif.github.io/posts/43720/"/>
-    <id>https://removeif.github.io/posts/43720/</id>
+    <link href="http://tanchuchu.github.io/posts/43720/"/>
+    <id>http://tanchuchu.github.io/posts/43720/</id>
     <published>2020-10-17T16:00:00.000Z</published>
     <updated>2020-11-03T15:22:19.451Z</updated>
     
@@ -282,17 +282,17 @@
     </summary>
     
     
-      <category term="webpack" scheme="https://removeif.github.io/categories/webpack/"/>
+      <category term="webpack" scheme="http://tanchuchu.github.io/categories/webpack/"/>
     
     
-      <category term="webpack" scheme="https://removeif.github.io/tags/webpack/"/>
+      <category term="webpack" scheme="http://tanchuchu.github.io/tags/webpack/"/>
     
   </entry>
   
   <entry>
     <title>webpack开发环境设置</title>
-    <link href="https://removeif.github.io/posts/61788/"/>
-    <id>https://removeif.github.io/posts/61788/</id>
+    <link href="http://tanchuchu.github.io/posts/61788/"/>
+    <id>http://tanchuchu.github.io/posts/61788/</id>
     <published>2020-10-17T16:00:00.000Z</published>
     <updated>2020-11-03T15:22:19.468Z</updated>
     
@@ -305,17 +305,17 @@
     </summary>
     
     
-      <category term="webpack" scheme="https://removeif.github.io/categories/webpack/"/>
+      <category term="webpack" scheme="http://tanchuchu.github.io/categories/webpack/"/>
     
     
-      <category term="webpack" scheme="https://removeif.github.io/tags/webpack/"/>
+      <category term="webpack" scheme="http://tanchuchu.github.io/tags/webpack/"/>
     
   </entry>
   
   <entry>
     <title>webpack简介</title>
-    <link href="https://removeif.github.io/posts/28499/"/>
-    <id>https://removeif.github.io/posts/28499/</id>
+    <link href="http://tanchuchu.github.io/posts/28499/"/>
+    <id>http://tanchuchu.github.io/posts/28499/</id>
     <published>2020-09-20T04:00:00.000Z</published>
     <updated>2020-11-03T15:22:19.462Z</updated>
     
@@ -328,17 +328,17 @@
     </summary>
     
     
-      <category term="webpack" scheme="https://removeif.github.io/categories/webpack/"/>
+      <category term="webpack" scheme="http://tanchuchu.github.io/categories/webpack/"/>
     
     
-      <category term="webpack" scheme="https://removeif.github.io/tags/webpack/"/>
+      <category term="webpack" scheme="http://tanchuchu.github.io/tags/webpack/"/>
     
   </entry>
   
   <entry>
     <title>笔记标题</title>
-    <link href="https://removeif.github.io/posts/24974/"/>
-    <id>https://removeif.github.io/posts/24974/</id>
+    <link href="http://tanchuchu.github.io/posts/24974/"/>
+    <id>http://tanchuchu.github.io/posts/24974/</id>
     <published>2020-09-18T14:00:00.000Z</published>
     <updated>2020-11-03T15:22:19.495Z</updated>
     
@@ -351,19 +351,19 @@
     </summary>
     
     
-      <category term="后台管理" scheme="https://removeif.github.io/categories/%E5%90%8E%E5%8F%B0%E7%AE%A1%E7%90%86/"/>
+      <category term="后台管理" scheme="http://tanchuchu.github.io/categories/%E5%90%8E%E5%8F%B0%E7%AE%A1%E7%90%86/"/>
     
     
-      <category term="js" scheme="https://removeif.github.io/tags/js/"/>
+      <category term="js" scheme="http://tanchuchu.github.io/tags/js/"/>
     
-      <category term="vue" scheme="https://removeif.github.io/tags/vue/"/>
+      <category term="vue" scheme="http://tanchuchu.github.io/tags/vue/"/>
     
   </entry>
   
   <entry>
     <title>加密文章测试</title>
-    <link href="https://removeif.github.io/posts/7e709353/"/>
-    <id>https://removeif.github.io/posts/7e709353/</id>
+    <link href="http://tanchuchu.github.io/posts/7e709353/"/>
+    <id>http://tanchuchu.github.io/posts/7e709353/</id>
     <published>2020-01-21T02:14:11.000Z</published>
     <updated>2020-08-28T01:10:13.000Z</updated>
     
@@ -376,17 +376,17 @@
     </summary>
     
     
-      <category term="private" scheme="https://removeif.github.io/categories/private/"/>
+      <category term="private" scheme="http://tanchuchu.github.io/categories/private/"/>
     
     
-      <category term="加密文章" scheme="https://removeif.github.io/tags/%E5%8A%A0%E5%AF%86%E6%96%87%E7%AB%A0/"/>
+      <category term="加密文章" scheme="http://tanchuchu.github.io/tags/%E5%8A%A0%E5%AF%86%E6%96%87%E7%AB%A0/"/>
     
   </entry>
   
   <entry>
     <title>不蒜子统计常见问题</title>
-    <link href="https://removeif.github.io/posts/89986481/"/>
-    <id>https://removeif.github.io/posts/89986481/</id>
+    <link href="http://tanchuchu.github.io/posts/89986481/"/>
+    <id>http://tanchuchu.github.io/posts/89986481/</id>
     <published>2019-12-21T00:46:08.000Z</published>
     <updated>2020-08-28T01:10:13.000Z</updated>
     
@@ -403,19 +403,19 @@
     </summary>
     
     
-      <category term="工具教程" scheme="https://removeif.github.io/categories/%E5%B7%A5%E5%85%B7%E6%95%99%E7%A8%8B/"/>
+      <category term="工具教程" scheme="http://tanchuchu.github.io/categories/%E5%B7%A5%E5%85%B7%E6%95%99%E7%A8%8B/"/>
     
-      <category term="博客统计插件" scheme="https://removeif.github.io/categories/%E5%B7%A5%E5%85%B7%E6%95%99%E7%A8%8B/%E5%8D%9A%E5%AE%A2%E7%BB%9F%E8%AE%A1%E6%8F%92%E4%BB%B6/"/>
+      <category term="博客统计插件" scheme="http://tanchuchu.github.io/categories/%E5%B7%A5%E5%85%B7%E6%95%99%E7%A8%8B/%E5%8D%9A%E5%AE%A2%E7%BB%9F%E8%AE%A1%E6%8F%92%E4%BB%B6/"/>
     
     
-      <category term="博客统计插件" scheme="https://removeif.github.io/tags/%E5%8D%9A%E5%AE%A2%E7%BB%9F%E8%AE%A1%E6%8F%92%E4%BB%B6/"/>
+      <category term="博客统计插件" scheme="http://tanchuchu.github.io/tags/%E5%8D%9A%E5%AE%A2%E7%BB%9F%E8%AE%A1%E6%8F%92%E4%BB%B6/"/>
     
   </entry>
   
   <entry>
     <title>github Issue 作为博客微型数据库的应用</title>
-    <link href="https://removeif.github.io/posts/e7fe3cc/"/>
-    <id>https://removeif.github.io/posts/e7fe3cc/</id>
+    <link href="http://tanchuchu.github.io/posts/e7fe3cc/"/>
+    <id>http://tanchuchu.github.io/posts/e7fe3cc/</id>
     <published>2019-11-28T14:02:05.000Z</published>
     <updated>2020-08-28T01:10:13.000Z</updated>
     
@@ -429,19 +429,19 @@
     </summary>
     
     
-      <category term="工具教程" scheme="https://removeif.github.io/categories/%E5%B7%A5%E5%85%B7%E6%95%99%E7%A8%8B/"/>
+      <category term="工具教程" scheme="http://tanchuchu.github.io/categories/%E5%B7%A5%E5%85%B7%E6%95%99%E7%A8%8B/"/>
     
-      <category term="主题工具" scheme="https://removeif.github.io/categories/%E5%B7%A5%E5%85%B7%E6%95%99%E7%A8%8B/%E4%B8%BB%E9%A2%98%E5%B7%A5%E5%85%B7/"/>
+      <category term="主题工具" scheme="http://tanchuchu.github.io/categories/%E5%B7%A5%E5%85%B7%E6%95%99%E7%A8%8B/%E4%B8%BB%E9%A2%98%E5%B7%A5%E5%85%B7/"/>
     
     
-      <category term="工具教程" scheme="https://removeif.github.io/tags/%E5%B7%A5%E5%85%B7%E6%95%99%E7%A8%8B/"/>
+      <category term="工具教程" scheme="http://tanchuchu.github.io/tags/%E5%B7%A5%E5%85%B7%E6%95%99%E7%A8%8B/"/>
     
   </entry>
   
   <entry>
     <title>中华人民共和国国旗法</title>
-    <link href="https://removeif.github.io/posts/79e097c3/"/>
-    <id>https://removeif.github.io/posts/79e097c3/</id>
+    <link href="http://tanchuchu.github.io/posts/79e097c3/"/>
+    <id>http://tanchuchu.github.io/posts/79e097c3/</id>
     <published>2019-10-10T12:06:34.000Z</published>
     <updated>2020-08-28T01:10:13.000Z</updated>
     
@@ -462,17 +462,17 @@
     </summary>
     
     
-      <category term="法律" scheme="https://removeif.github.io/categories/%E6%B3%95%E5%BE%8B/"/>
+      <category term="法律" scheme="http://tanchuchu.github.io/categories/%E6%B3%95%E5%BE%8B/"/>
     
     
-      <category term="法律" scheme="https://removeif.github.io/tags/%E6%B3%95%E5%BE%8B/"/>
+      <category term="法律" scheme="http://tanchuchu.github.io/tags/%E6%B3%95%E5%BE%8B/"/>
     
   </entry>
   
   <entry>
     <title>中华人民共和国宪法</title>
-    <link href="https://removeif.github.io/posts/bdeb1d7c/"/>
-    <id>https://removeif.github.io/posts/bdeb1d7c/</id>
+    <link href="http://tanchuchu.github.io/posts/bdeb1d7c/"/>
+    <id>http://tanchuchu.github.io/posts/bdeb1d7c/</id>
     <published>2019-10-10T10:34:50.000Z</published>
     <updated>2020-08-28T01:10:13.000Z</updated>
     
@@ -493,17 +493,17 @@
     </summary>
     
     
-      <category term="法律" scheme="https://removeif.github.io/categories/%E6%B3%95%E5%BE%8B/"/>
+      <category term="法律" scheme="http://tanchuchu.github.io/categories/%E6%B3%95%E5%BE%8B/"/>
     
     
-      <category term="法律" scheme="https://removeif.github.io/tags/%E6%B3%95%E5%BE%8B/"/>
+      <category term="法律" scheme="http://tanchuchu.github.io/tags/%E6%B3%95%E5%BE%8B/"/>
     
   </entry>
   
   <entry>
     <title>github page网站cdn优化加速</title>
-    <link href="https://removeif.github.io/posts/346ce02e/"/>
-    <id>https://removeif.github.io/posts/346ce02e/</id>
+    <link href="http://tanchuchu.github.io/posts/346ce02e/"/>
+    <id>http://tanchuchu.github.io/posts/346ce02e/</id>
     <published>2019-09-25T08:41:46.000Z</published>
     <updated>2020-08-28T01:10:13.000Z</updated>
     
@@ -517,12 +517,12 @@
     </summary>
     
     
-      <category term="工具教程" scheme="https://removeif.github.io/categories/%E5%B7%A5%E5%85%B7%E6%95%99%E7%A8%8B/"/>
+      <category term="工具教程" scheme="http://tanchuchu.github.io/categories/%E5%B7%A5%E5%85%B7%E6%95%99%E7%A8%8B/"/>
     
-      <category term="主题工具" scheme="https://removeif.github.io/categories/%E5%B7%A5%E5%85%B7%E6%95%99%E7%A8%8B/%E4%B8%BB%E9%A2%98%E5%B7%A5%E5%85%B7/"/>
+      <category term="主题工具" scheme="http://tanchuchu.github.io/categories/%E5%B7%A5%E5%85%B7%E6%95%99%E7%A8%8B/%E4%B8%BB%E9%A2%98%E5%B7%A5%E5%85%B7/"/>
     
     
-      <category term="工具教程" scheme="https://removeif.github.io/tags/%E5%B7%A5%E5%85%B7%E6%95%99%E7%A8%8B/"/>
+      <category term="工具教程" scheme="http://tanchuchu.github.io/tags/%E5%B7%A5%E5%85%B7%E6%95%99%E7%A8%8B/"/>
     
   </entry>
   
